@@ -1,4 +1,3 @@
-// setting up MCP server for my AI AGENT
 
 import express from "express";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
