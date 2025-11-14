@@ -10,7 +10,7 @@ let tools = []
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 const mcpClient = new Client({
     name: "example-client",
-    version: "1.0.0",
+    version: "1.0.0"
 })
 
 
