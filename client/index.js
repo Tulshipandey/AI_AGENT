@@ -10,7 +10,7 @@ let tools = []
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 const mcpClient = new Client({
     name: "example-client",
-    version: "1.0.0"
+    version: "1.0.0",
 })
 
 
@@ -22,7 +22,7 @@ const rl = readline.createInterface({
 });
 
 
-mcpClient.connect(new SSEClientTransport(new URL("http://localhost:3000/sse")))
+mcpClient.connect(new SSEClientTransport(new URL("http://localhost:3001/sse")))
     .then(async () => {
 
         console.log("Connected to mcp server")
@@ -118,6 +118,8 @@ async function chatLoop(toolCall) {
     })
 
     console.log(`AI: ${responseText}`)
+    await sleep(1000);
+
 
 
     chatLoop()
